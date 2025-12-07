@@ -1,0 +1,48 @@
+# .gitignore
+
+# Python
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+
+.env
+.venv/
+venv/
+
+# Jupyter
+
+.ipynb_checkpoints
+
+# Data + DVC
+
+data/
+*.dvc
+.dvc/
+
+# Python packaging
+
+dist/
+build/
+*.egg-info/
+
+# IDEs
+
+.vscode/
+.idea/
+
+# Logs
+
+logs/
+*.log
+
+# GitHub Actions
+
+.github/workflows/
+
+# local secrets
+
+secrets.yml

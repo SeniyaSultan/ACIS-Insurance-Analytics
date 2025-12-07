@@ -1,0 +1,26 @@
+# dvc.yaml
+
+stages:
+preprocess:
+cmd: python src/data_preprocessing.py --input data/raw/insurance_data.csv --output data/processed/cleaned.csv
+deps:
+- src/data_preprocessing.py
+- data/raw/insurance_data.csv
+outs:
+- data/processed/cleaned.csv
+
+eda:
+cmd: python src/eda.py --input data/processed/cleaned.csv --outdir reports/figures
+deps:
+- src/eda.py
+- data/processed/cleaned.csv
+outs:
+- reports/figures/loss_ratio_by_province.png
+
+models:
+cmd: python src/models.py --input data/processed/cleaned.csv --outdir models/
+deps:
+- src/models.py
+- data/processed/cleaned.csv
+outs:
+- models/best_model.joblib

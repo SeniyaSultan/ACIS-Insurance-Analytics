@@ -1,0 +1,26 @@
+# requirements.txt
+
+# core
+
+pandas>=1.5
+numpy>=1.24
+scikit-learn>=1.2
+matplotlib>=3.6
+seaborn>=0.12
+
+# modeling
+
+xgboost>=1.7
+shap>=0.42
+
+# utilities
+
+dvc>=2.40
+pyyaml
+joblib
+
+# testing & linting (CI)
+
+pytest
+black
+flake8
